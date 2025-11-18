@@ -23,15 +23,13 @@ clone the repo, run `./install.sh`, get a working openmediavault web UI on Ubunt
   - `amd64`
   - `armhf`
 
-- A helper script `build_packs.sh` to (re)build packages for your architecture if prebuilt ones are missing.
-
 - A vendored `jc-1.25.6.tar.gz` used to make system info / statistics in the OMV web UI work correctly on Ubuntu.
 
 ---
 
 ## Requirements
 
-- Ubuntu (systemd-based; Server/Desktop, amd64 or armhf)
+- Ubuntu (systemd-based; Server/Desktop)
 - Root access (`sudo` or direct root)
 - Internet access for pulling dependencies from Ubuntu and Debian repositories
 
