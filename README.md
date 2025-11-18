@@ -1,4 +1,4 @@
-# openmediavault-ubuntu
+# openmediavault ubuntu installer
 
 Unofficial **direct installer** for [openmediavault 8](https://www.openmediavault.org/) on Ubuntu.
 
@@ -45,3 +45,21 @@ cd openmediavault-ubuntu
 
 chmod +x install.sh
 sudo ./install.sh
+
+```
+
+## P.S.
+
+This project was originally created **just for fun** — a personal experiment to see whether the tiny **Luckfox Pico Max** could run a full OpenMediaVault setup on Ubuntu.
+
+Surprisingly, it works.  
+The repository contains all necessary adjustments, patches and workarounds to make OMV 8 boot and operate correctly on such minimal hardware.
+
+A prepared Luckfox Pico Max firmware image (with unnecessary components removed and all required kernel modules enabled for OMV) can be downloaded here:
+
+👉 **[Download custom Luckfox Pico Max firmware](https://mega.nz/file/5kUxEYQS#pAElSPDYDMvJcX-Q3Ge2d4IXJ0PMTdJSIi2cSL4f_NM)**
+
+Feel free to use it, modify it, or treat this whole project as a playground for hacking around with OMV on unconventional hardware.
+
+Enjoy experimenting.
+
