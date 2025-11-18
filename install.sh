@@ -7,6 +7,18 @@ adduser --system --group --no-create-home _apt
 usermod -aG root _apt
 ARCH="$(dpkg --print-architecture)"
 
+OMV_SALT_PKG="./openmediavault-salt_8.0_${ARCH}.deb"
+PHP_PAM_PKG="./php-pam_2.2.5-1+deb13u1_${ARCH}.deb"
+
+if [ ! -f "$OMV_SALT_PKG" ] || [ ! -f "$PHP_PAM_PKG" ]; then
+    echo "Packages for arch ${ARCH} are missing, running build_packs.sh..."
+    chmod +x ./build_packs.sh
+    ./build_packs.sh
+else
+    echo "Packages for arch ${ARCH} already exist:"
+    echo "  $OMV_SALT_PKG"
+    echo "  $PHP_PAM_PKG"
+fi
 
 apt-get install -y ./openmediavault_8.0-7_all.deb ./openmediavault-salt_8.0_${ARCH}.deb ./openmediavault-keyring_1.0.2-2_all.deb ./php-pam_2.2.5-1+deb13u1_${ARCH}.deb
 
