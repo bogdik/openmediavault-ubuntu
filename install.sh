@@ -152,7 +152,31 @@ service monit restart
 omv-salt deploy run collectd
 service collectd restart
 
+if command -v luckfox-config >/dev/null 2>&1 && [ ! -f /data/ethaddr.txt ]; then
+    echo "Luckfox finded..."
+    echo "Fix MAC address on eth0"
+    echo "IF you want use typeC as host need launch luckfox-config and Advanced Options -> USB -> host and restart board"
+    MAC=$(ip -o link show eth0 2>/dev/null | awk '{print $17}' | tr '[:lower:]' '[:upper:]')
+    [ -n "$MAC" ] || exit 1
 
+    mkdir -p /data
+    echo "$MAC" > /data/ethaddr.txt
+
+    # Вставляем пустую строку + блок после #!/bin/bash
+    if [ -f /etc/rc.local ]; then
+        if ! grep -q 'ethaddr2=$(cat /data/ethaddr.txt)' /etc/rc.local; then
+            sed -i '1a \
+\
+ethaddr2=$(cat /data/ethaddr.txt)\
+ifconfig eth0 down\
+ifconfig eth0 hw ether \$ethaddr2\
+ifconfig eth0 up\
+ifup eth0' /etc/rc.local
+
+            chmod +x /etc/rc.local
+        fi
+    fi
+fi
 
 echo "Complite goto http://IP and login admin password openmediavault"
 
