@@ -164,15 +164,13 @@ if command -v luckfox-config >/dev/null 2>&1 && [ ! -f /data/ethaddr.txt ]; then
 
     if [ -f /etc/rc.local ]; then
         if ! grep -q 'ethaddr2=$(cat /data/ethaddr.txt)' /etc/rc.local; then
-            sed -i '1a \
-\
+            sed -i '4a \
 ethaddr2=$(cat /data/ethaddr.txt)\
 ifconfig eth0 down\
 ifconfig eth0 hw ether \$ethaddr2\
 ifconfig eth0 up\
 ifup eth0' /etc/rc.local
 
-            chmod +x /etc/rc.local
         fi
     fi
 fi
