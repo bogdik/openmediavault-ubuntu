@@ -58,7 +58,7 @@ The repository contains all necessary adjustments, patches and workarounds to ma
 
 A prepared Luckfox Pico Max firmware image (with unnecessary components removed and all required kernel modules enabled for OMV) can be downloaded here:
 
-👉 **[Download custom Luckfox Pico Max firmware](https://mega.nz/file/5kUxEYQS#pAElSPDYDMvJcX-Q3Ge2d4IXJ0PMTdJSIi2cSL4f_NM)**
+👉 **[Download custom Luckfox Pico Max firmware](https://mega.nz/file/I5VHzQSD#PCYd_8qKtv1LefM6lOAEhJJCBtf_c46-kEeAw5NMFS4)**
 
 Feel free to use it, modify it, or treat this whole project as a playground for hacking around with OMV on unconventional hardware.
 
