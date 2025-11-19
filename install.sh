@@ -93,6 +93,8 @@ if dpkg --compare-versions "$CUR_VER" lt "$REQ_VER"; then
 	  s/^([[:space:]]*)- mount\.set_fstab:/\1  - name: mount.set_fstab/;
 	  s/^([[:space:]]*)- name: \"\/\"/\1- m_name: \"\/\"/;
 	}" /srv/salt/omv/setup/fstab/default.sls
+	
+	sed -i -E 's/^([[:space:]]*)- service\.systemctl_reload:/\1- name: service.systemctl_reload/' /srv/salt/omv/deploy/systemd/10sharedfolders.sls
     
 else
 	echo "No need chenges..."
