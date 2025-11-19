@@ -21,6 +21,7 @@ clone the repo, run `./install.sh`, get a working openmediavault web UI on Ubunt
 
 - Prebuilt **php-pam** and **openmediavault-salt** packages for:
   - `amd64`
+  - `arm64`
   - `armhf`
 
 - A vendored `jc-1.25.6.tar.gz` used to make system info / statistics in the OMV web UI work correctly on Ubuntu.
