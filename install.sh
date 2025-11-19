@@ -162,7 +162,6 @@ if command -v luckfox-config >/dev/null 2>&1 && [ ! -f /data/ethaddr.txt ]; then
     mkdir -p /data
     echo "$MAC" > /data/ethaddr.txt
 
-    # Вставляем пустую строку + блок после #!/bin/bash
     if [ -f /etc/rc.local ]; then
         if ! grep -q 'ethaddr2=$(cat /data/ethaddr.txt)' /etc/rc.local; then
             sed -i '1a \
