@@ -38,8 +38,6 @@ It is strongly recommended to start from a **clean** Ubuntu installation.
 
 ---
 
----
-
 ## Tested
 
 - On Ubuntu 22.04.5 LTS (**Luckfox Pico Max**)
