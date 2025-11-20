@@ -66,7 +66,7 @@ sudo ./install.sh
 ```
 After install plugin maybe need launch 
 ```
-chmod +x ./fix_plugin&&./fix_plugin
+chmod +x ./fix_plugin.sh&&./fix_plugin.sh
 ```
 
 ## P.S.
