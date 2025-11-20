@@ -38,6 +38,24 @@ It is strongly recommended to start from a **clean** Ubuntu installation.
 
 ---
 
+---
+
+## Tested
+
+- On Ubuntu 22.04.5 LTS (**Luckfox Pico Max**)
+  - `FTP`
+  - `SFTP`
+  - `TFTP`
+  - `SMB`
+  - `NFS`
+  - `Rsync`
+
+Package openmediavault-filebrowser_8.0-2_all.deb need docker (don't requment install this)
+
+It is strongly recommended to start from a **clean** Ubuntu installation.
+
+---
+
 ## Quick start
 
 ```bash
@@ -48,10 +66,14 @@ chmod +x install.sh
 sudo ./install.sh
 
 ```
+After install plugin maybe need launch 
+```
+chmod +x ./fix_plugin&&./fix_plugin
+```
 
 ## P.S.
 
-This project was originally created **just for fun** — a personal experiment to see whether the tiny **Luckfox Pico Max** could run a full OpenMediaVault setup on Ubuntu.
+This project was originally created **just for fun** - a personal experiment to see whether the tiny **Luckfox Pico Max** could run a full OpenMediaVault setup on Ubuntu.
 
 Surprisingly, it works.  
 The repository contains all necessary adjustments, patches and workarounds to make OMV 8 boot and operate correctly on such minimal hardware.
